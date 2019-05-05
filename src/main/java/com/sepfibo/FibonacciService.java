@@ -7,14 +7,14 @@ public interface FibonacciService {
 
   /**
    * Find range of Fibonacci Sequence from 0 -> range
-   * @param range N
+   * @param range N between 1-10000
    * @return List<BigInteger> List of Fibonacci sequence up to N
    */
   List<BigInteger> findFibonacciRange(int range);
 
   /**
    * Find the Nth value of the fibonacci sequence.
-   * @param digit N
+   * @param digit N between 1-10000
    * @return BigInteger Nth value of fibonacci sequence
    */
   BigInteger findFibonacciNumber(int digit);

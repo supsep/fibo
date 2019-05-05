@@ -1,5 +1,10 @@
 package com.sepfibo;
 
+import static com.sepfibo.Constants.EMPTY_INPUT;
+import static com.sepfibo.Constants.INVALID_NUMBER;
+import static com.sepfibo.Constants.MAXIUMUM_INPUT;
+import static com.sepfibo.Constants.MINIUMUM_INPUT;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +44,7 @@ public class FibonacciServiceImpl implements FibonacciService {
   public int validateInput(String input) throws Exception {
     // Validate input is non-null and non-empty
     if (input == null || input.length() < 1) {
-      throw new Exception("Empty input.");
+      throw new Exception(EMPTY_INPUT);
     }
 
     // Convert input to int
@@ -48,14 +53,14 @@ public class FibonacciServiceImpl implements FibonacciService {
     try {
       value = Integer.parseInt(input.trim());
     } catch (NumberFormatException nfe) {
-      throw new Exception("Invalid number.");
+      throw new Exception(INVALID_NUMBER);
     }
 
     // Validate min and max for input
     if (value < 1) {
-      throw new Exception("Value must be an integer greater than 0.");
+      throw new Exception(MINIUMUM_INPUT);
     } else if (value > 10000) {
-      throw new Exception("Value must be an integer less than 10000.");
+      throw new Exception(MAXIUMUM_INPUT);
     }
 
     return value;

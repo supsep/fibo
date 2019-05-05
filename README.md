@@ -22,8 +22,7 @@ Enter N to generate Fibonacci sequence up to Nth digit:
 Then input your numbers:
 ```
 >10
-The word value for : 123123123123123 is: One Hundred Twenty Three Trillion One Hundred Twenty Three Billion One Hundred Twenty Three Million One Hundred Twenty Three Thousand One Hundred Twenty Three
-
+0 1 1 2 3 5 8 13 21 34
 ```
 
 ## Input criteria
